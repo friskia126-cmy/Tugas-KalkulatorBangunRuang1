@@ -4,6 +4,7 @@
  */
 
 
+
 package kalkulatorbangunruang;
 
 import java.util.Scanner;
@@ -18,14 +19,17 @@ public class Main {
         System.out.println("     KALKULATOR BANGUN RUANG");
         System.out.println("================================");
 
-        // Input Kubus
+        // KUBUS
         System.out.println("\n--- KUBUS ---");
         System.out.print("Masukkan sisi: ");
         double sisi = input.nextDouble();
 
         Kubus kubus = new Kubus(sisi);
 
-        // Input Balok
+        System.out.println("Volume Kubus: " + kubus.hitungVolume());
+        System.out.println("Luas Kubus: " + kubus.hitungLuas());
+
+        // BALOK
         System.out.println("\n--- BALOK ---");
         System.out.print("Masukkan panjang: ");
         double panjang = input.nextDouble();
@@ -38,7 +42,10 @@ public class Main {
 
         Balok balok = new Balok(panjang, lebar, tinggi);
 
-        // Input Tabung
+        System.out.println("Volume Balok: " + balok.hitungVolume());
+        System.out.println("Luas Balok: " + balok.hitungLuas());
+
+        // TABUNG
         System.out.println("\n--- TABUNG ---");
         System.out.print("Masukkan jari-jari: ");
         double r = input.nextDouble();
@@ -48,28 +55,9 @@ public class Main {
 
         Tabung tabung = new Tabung(r, t);
 
-        // Menampilkan hasil
-        System.out.println("\n================================");
-        System.out.println("       HASIL PERHITUNGAN");
-        System.out.println("================================");
-
-        System.out.println("\nKUBUS");
-        System.out.println("Volume: " + kubus.hitungVolume());
-        System.out.println("Luas Permukaan: " + kubus.hitungLuas());
-
-        System.out.println("\nBALOK");
-        System.out.println("Volume: " + balok.hitungVolume());
-        System.out.println("Luas Permukaan: " + balok.hitungLuas());
-
-        System.out.println("\nTABUNG");
-        System.out.println("Volume: " + tabung.hitungVolume());
-        System.out.println("Luas Permukaan: " + tabung.hitungLuas());
-
-        System.out.println("\n================================");
-        System.out.println("       PROGRAM SELESAI");
-        System.out.println("================================");
+        System.out.println("Volume Tabung: " + tabung.hitungVolume());
+        System.out.println("Luas Tabung: " + tabung.hitungLuas());
 
         input.close();
     }
 }
-
